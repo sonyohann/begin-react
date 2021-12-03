@@ -4,10 +4,10 @@ function Hello({ name, color, isSpecial }) {
   return (
     <div
       style={{
-        color: color,
+        color,
       }}
     >
-      <b> {isSpecial ? "스페셜!!" : "낫스페셜.."} </b>
+      {!isSpecial || <b>*</b>}
       안녕하세요 {name}
     </div>
   );

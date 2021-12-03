@@ -1,17 +1,15 @@
 import React, { useState, useRef } from "react";
 
 function InputSample() {
-  const nameInput = useRef();
   const [inputs, setInputs] = useState({
     name: "",
     nickname: "",
   });
-
+  const nameInput = useRef();
   const { name, nickname } = inputs;
 
   const onChange = (e) => {
     const { name, value } = e.target;
-
     setInputs({
       ...inputs,
       [name]: value,
